@@ -1,7 +1,8 @@
- const User = require('../models/userModel');
+ const user = require('../models/userModel');
+const User = require('../models/userModel');
  const createError = require('../utils/appError');
  const bcrypt = require('bcryptjs');
- const jwt = required('jsonwebtoken'); 
+ const jwt = require('jsonwebtoken'); 
  
 exports.signUp = async (req, res, next) => {
     try{
@@ -35,4 +36,31 @@ exports.signUp = async (req, res, next) => {
 };
 
 //LOGGING USER
-exports.login = async (req, res, next) => {};
+exports.login = async (req, res, next) => {
+    try{
+        const {email, password} = req.body;
+        const user = await User.findOne({email});
+
+        if(!user) return next(new createError('User not found', 404));
+
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+
+        if (!isPasswordValid) return next(new createError('Invalid credentials', 401));
+
+        const token = jwt.sign({id: newUser._id}, 'secretkey123', {
+            expiresIn: '90d',
+        });
+        res.status(200).json({
+            status: 'success',
+            message: 'User logged in successfully',
+            token,
+            user:{
+            _id: user._id,
+            name: user.name,
+            email: user.email,
+            role: user.role,}
+        });
+    } catch (error){
+        next(error);
+    }
+};
