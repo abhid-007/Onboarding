@@ -29,6 +29,11 @@ exports.signUp = async (req, res, next) => {
         status: 'success',
         message: 'User registered successfully',
         token,
+        user:{
+            _id: newUser._id,
+            name: newUser.name,
+            email: newUser.email,
+            role: newUser.role,},
     });
     } catch (error){
         next(error);
@@ -47,7 +52,7 @@ exports.login = async (req, res, next) => {
 
         if (!isPasswordValid) return next(new createError('Invalid credentials', 401));
 
-        const token = jwt.sign({id: newUser._id}, 'secretkey123', {
+        const token = jwt.sign({id: user._id}, 'secretkey123', {
             expiresIn: '90d',
         });
         res.status(200).json({
