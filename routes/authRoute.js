@@ -1,8 +1,9 @@
 const express = require('express');
 const authController = require('../controllers/authController');
 
+module.exports = router;
+
 const router = express.Router();
 
 router.post('/signup', authController.signUp);
-
-///This is to check git push is working or not
+router.post('/login', authController.login);
