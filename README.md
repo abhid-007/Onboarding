@@ -12,6 +12,10 @@ A brief description of what this project does and who it's for
 👇This shows that if we try to register the same user then it will respond as "user already exists"
 <img width="1276" alt="SCR-20240425-bgdf" src="https://github.com/abhid-007/Onboarding/assets/118394049/d03a98ce-3726-429d-9f81-7cd2625ed462">
 
+👇This shows the test of login API by providing "testuser" credentials
+<img width="1277" alt="SCR-20240425-bsyh" src="https://github.com/abhid-007/Onboarding/assets/118394049/0dda14ee-f084-4c46-bb2d-240ca6cc5461">
+
+
 ✅Overall the connection is established with mongodb and code is working as expected.
 
 
