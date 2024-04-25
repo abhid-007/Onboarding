@@ -9,8 +9,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-height: 100vh;
-background: #cbdbff;}
+  height: 100vh;
+  background: #cbdbff;}
 
 /* form styling */
 .form-container{
@@ -22,4 +22,8 @@ background: #cbdbff;}
 }
 .title, .slogan{
   text-align: center;
+}
+.btn{
+  width: 100%;
+
 }
