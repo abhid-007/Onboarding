@@ -1,10 +1,12 @@
 import React from 'react';
 import {Alert, Button, Card, Flex, Form, Input, Spin, Typography} from 'antd';
 import { Link } from 'react-router-dom';
+import useSignup from '../hooks/useSignup';
 
 const Register = () => {
+    const {loading, error, registerUser} = useSignup();
     const handleRegister = (values) => {
-        console.log(values);
+        registerUser(values);
     };
 
   return( 
@@ -51,9 +53,25 @@ const Register = () => {
                     }]}>
                     <Input.Password size='large' placeholder='Confirm your Password' />
                 </Form.Item>
+
+                {
+                error && (
+                    <Alert
+                    description={error}
+                    type='error'
+                    showIcon
+                    closable
+                    className='alert'
+                    />
+                )}
                 
                 <Form.Item>
-                    <Button size='large' type='primary' htmlType="submit" className='btn'>Create Account</Button>
+                    <Button 
+                    type={`${loading ? '' : 'primary'}`}
+                    size='large' htmlType="submit" 
+                    className='btn'>
+                        {loading ? <Spin /> : 'Create Account'}
+                    </Button>
                 </Form.Item>
                 <Form.Item>
                     <Link to='/login'>

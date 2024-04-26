@@ -17,3 +17,9 @@ A brief description of what this project does and who it's for
 
 
 ✅Overall the connection is established with mongodb and code is working as expected.
+
+## ⛔️[26/04/2024]Update: Made the Base for frontend
+Created a simple frontend user interface for SignUp and Log In
+<img width="1470" alt="SCR-20240426-khor" src="https://github.com/abhid-007/Onboarding/assets/118394049/ac771f87-74f7-4267-80ca-34112b43d865">
+<img width="1470" alt="SCR-20240426-khqg" src="https://github.com/abhid-007/Onboarding/assets/118394049/35543367-8956-4c9e-9536-179bed403610">
+

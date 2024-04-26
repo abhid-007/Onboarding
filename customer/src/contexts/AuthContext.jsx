@@ -1,6 +1,4 @@
-import React, { createContext, useContext, useEffect } from 'react'
-import { create } from '../../../server/models/userModel';
-import { use } from '../../../routes/authRoute';    
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 const AuthContext = createContext();
 export const AuthProvider = ({children}) => {
