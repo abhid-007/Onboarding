@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Flex, Form, Input, Typography} from 'antd';
+import {Card, Flex, Form, Input, Typography, Button} from 'antd';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
@@ -8,7 +8,7 @@ const Register = () => {
     };
 
   return( 
-  <Card className='form container'>
+  <Card className='form-container'>
     <Flex>
     {/* Form */}
         <Flex vertical flex={1} className='form'>
