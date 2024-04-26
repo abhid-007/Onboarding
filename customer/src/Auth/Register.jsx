@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Flex, Form, Input, Typography, Button} from 'antd';
+import {Alert, Button, Card, Flex, Form, Input, Spin, Typography} from 'antd';
 import { Link } from 'react-router-dom';
 
 const Register = () => {
