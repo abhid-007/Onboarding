@@ -12,8 +12,12 @@ const Register = () => {
     <Flex>
     {/* Form */}
         <Flex vertical flex={1} className='form'>
-        <Typography.Title level={3} strong className='title'>Create an Account</Typography.Title>
-        <Typography.Text type='secondary' strong className="slogan">Join for exclusive access!</Typography.Text>
+        <Typography.Title level={3} strong className='title'>
+            Create an Account
+            </Typography.Title>
+        <Typography.Text type='secondary' strong className="slogan">
+        Welcome👋. Let's get you started
+            </Typography.Text>
         <Form layout='vertical' onFinish={handleRegister} autoComplete='off' autoCorrect='off'>
             <Form.Item label="Full Name" name="name" rules= {[{
                 required: true,
@@ -43,7 +47,7 @@ const Register = () => {
 
                 <Form.Item label="Confirm Password" name="passwordConfirm" rules= {[{
                     required: true,
-                    message: 'Please enter your password!'
+                    message: 'Please re-enter your password!'
                     }]}>
                     <Input.Password size='large' placeholder='Confirm your Password' />
                 </Form.Item>
